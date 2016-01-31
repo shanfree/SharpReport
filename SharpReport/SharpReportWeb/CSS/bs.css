@@ -1,0 +1,40 @@
+td.ul{
+	width:18px;
+	height:18px;
+	background:url(../Images/tip/ul.png);
+}
+td.ur{
+	width:18px;
+	height:18px;
+	background:url(../Images/tip/ur.png);
+}
+td.bl{
+	width:18px;
+	height:18px;
+	background:url(../Images/tip/bl.png);
+}
+td.br{
+	width:18px;
+	height:18px;
+	background:url(../Images/tip/br.png);
+}
+td.u{
+	height:18px;
+	background:url(../Images/tip/u.jpg);
+}
+td.r{
+	width:18px;
+	background:url(../Images/tip/r.jpg);
+}
+td.b{
+	height:18px;
+	background:url(../Images/tip/b.jpg);
+}
+td.l{
+	width:18px;
+	background:url(../Images/tip/l.jpg);
+}
+td.c{
+	background:#e8e8e8;
+	color:#666;
+}

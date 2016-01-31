@@ -1,0 +1,197 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="MasterPage_Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>中国农业银行-福新支行</title>
+</head>
+<body>
+    <link href="../Images/red/default.css" rel="stylesheet" type="text/css" />
+    <script src="../Scripts/swfobject_modified.js" type="text/javascript"></script>
+
+    <style type="text/css">
+        .friendly_link
+        {
+            text-align: center;
+        }
+        .d_menuItem a
+        {
+            display: block;
+            padding: 0.5em 0.5em;
+        }
+    </style>
+
+    <script type="text/javascript">
+    function writeDateInfo()
+    {
+     var day="";
+     var month="";
+     var ampm="";
+     var ampmhour="";
+     var myweekday="";
+     var year="";
+     mydate=new Date();
+     myweekday=mydate.getDay();
+     mymonth=mydate.getMonth()+1;
+     myday= mydate.getDate();
+     myyear= mydate.getYear();
+     year=(myyear > 200) ? myyear : 1900 + myyear;
+     if(myweekday == 0)
+     weekday=" 星期日";
+     else if(myweekday == 1)
+     weekday=" 星期一";
+     else if(myweekday == 2)
+     weekday=" 星期二";
+     else if(myweekday == 3)
+     weekday=" 星期三";
+     else if(myweekday == 4)
+     weekday=" 星期四";
+     else if(myweekday == 5)
+     weekday=" 星期五";
+     else if(myweekday == 6)
+     weekday=" 星期六";
+     document.write(year+"年"+mymonth+"月"+myday+"日"+weekday);
+    }
+    </script>
+
+    <form id="form1" runat="server">
+    <table border="0" cellpadding="0" cellspacing="0" id="banner">
+        <tr>
+            <td class="logo">
+                &nbsp;
+            </td>
+            <td>
+                <object id="FlashID2" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="550"
+                    height="70">
+                    <param name="movie" value="../UploadFiles/AD/Banner.swf" />
+                    <param name="quality" value="high" />
+                    <param name="wmode" value="transparent" />
+                    <param name="swfversion" value="6.0.65.0" />
+                    <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don’t want users to see the prompt. -->
+                    <param name="expressinstall" value="Scripts/expressInstall.swf" />
+                    <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
+                    <!--[if !IE]>-->
+                    <object type="application/x-shockwave-flash" data="../UploadFiles/AD/Banner.swf"
+                        width="550" height="70">
+                        <!--<![endif]-->
+                        <param name="quality" value="high" />
+                        <param name="wmode" value="transparent" />
+                        <param name="swfversion" value="6.0.65.0" />
+                        <param name="expressinstall" value="Scripts/expressInstall.swf" />
+                        <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
+                        <div>
+                            <h4>
+                                Content on this page requires a newer version of Adobe Flash Player.</h4>
+                            <p>
+                                <a href="http://www.adobe.com/go/getflashplayer">
+                                    <img src="http://www.adobe.com/../Images/shared/download_buttons/get_flash_player.gif"
+                                        alt="Get Adobe Flash player" width="112" height="33" /></a></p>
+                        </div>
+                        <!--[if !IE]>-->
+                    </object>
+                    <!--<![endif]-->
+                </object>
+                <!--banner-->
+            </td>
+            <td align="right" style="line-height: 2em;">
+                <a href="<%=HOME_PAGE %>" onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('<%=HOME_PAGE %>');return(false);"
+                    style="behavior: url(#default#homepage)">[设为首页]</a><br />
+                <a href="../Admin/Main.aspx">[管理登陆]</a><br />
+                <a href="#">[建言信箱]</a>
+            </td>
+        </tr>
+    </table>
+    <div id="mainNav">
+        <span id="spDate">
+            <script type="text/javascript">writeDateInfo();</script>
+        </span>
+        <asp:Menu ID="mMain" runat="server" Orientation="Horizontal" StaticEnableDefaultPopOutImage="False"
+            Font-Size="1em" DynamicVerticalOffset="2" DynamicEnableDefaultPopOutImage="False"
+            StaticSubMenuIndent="0px" DynamicHoverStyle-BackColor="#FF6F70" DynamicHoverStyle-ForeColor="White"
+            EnableTheming="False" ItemWrap="True">
+            <StaticMenuStyle CssClass="mainNav_Links" />
+            <StaticMenuItemStyle ItemSpacing="0em" />
+            <DynamicHoverStyle BackColor="#FF6F70" ForeColor="White" Width="100px"></DynamicHoverStyle>
+            <DynamicMenuStyle BorderColor="#FF6F70" BorderStyle="Solid" BorderWidth="1px" Width="100px" />
+            <DynamicSelectedStyle Width="100px" />
+            <DynamicMenuItemStyle CssClass="d_menuItem" />
+            <Items>
+            </Items>
+        </asp:Menu>
+    </div>
+    <div id="mainBox">
+        <div id="column_01">
+            <div class="widgetTitle">
+                <span id="lbTitle" runat="server">系统管理</span><div class="br">
+                </div>
+            </div>
+            <div class="widget">
+                <a href="../Admin/Main.aspx">系统信息</a> <a href="../Admin/Log.aspx">日志管理</a> <a href="../Admin/Config.aspx">参数配置</a><a href="../Default.aspx">返回首页</a>
+            </div>
+            <div class="widgetTitle">
+                <span id="Span1" runat="server">用户管理</span><div class="br">
+                </div>
+            </div>
+            <div class="widget">
+                <a href="../Admin/Register.aspx">添加用户</a> <a href="../Admin/UserManager.aspx">用户管理</a>
+            </div>
+            <div class="widgetTitle">
+                <span id="Span2" runat="server">通用栏目管理</span><div class="br">
+                </div>
+            </div>
+            <div class="widget">
+                <a href="../Admin/MenuMange.aspx">栏目管理</a> <a href="../Admin/NewsAdd.aspx">添加新闻</a>
+                <a href="../Admin/NewsManage.aspx">新闻管理</a>
+            </div>
+            <div class="widgetTitle">
+                <span id="Span3" runat="server">自定义栏目管理</span><div class="br">
+                </div>
+            </div>
+            <div class="widget">
+                <a href="../Admin/PicNewsManage.aspx">图片新闻维护</a> <a href="../Admin/TelephoneManage.aspx">
+                    电话列表维护</a>
+            </div>
+        </div>
+        <div id="column_05">
+            <asp:ContentPlaceHolder ID="Conut1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="br">
+            <!-- -->
+        </div>
+    </div>
+    <div style="text-align: center;">
+        <img src="../Images/red/friendlyLinks.gif" alt="友情链接" /></div>
+    <div id="branch_bank">
+        <dl>
+            <dd>
+                <a href="http://web.abc/">总&nbsp;&nbsp;&nbsp;&nbsp;行</a></dd>
+            <dd>
+                <a href="http://www.fj.abc/">省&nbsp;分&nbsp;行</a></dd>
+            <dd>
+                <a href="http://www.fz.fj.abc/">营&nbsp;业&nbsp;部</a></dd>
+            <dd>
+                <a href="http://www.zz.fj.abc/">漳&nbsp;&nbsp;&nbsp;&nbsp;州</a></dd>
+            <dd>
+                <a href="http://www.qz.fj.abc/">泉&nbsp;&nbsp;&nbsp;&nbsp;州</a></dd>
+            <dd>
+                <a href="http://www.pt.fj.abc/">莆&nbsp;&nbsp;&nbsp;&nbsp;田</a></dd>
+            <dd>
+                <a href="http://www.sm.fj.abc/">三&nbsp;&nbsp;&nbsp;&nbsp;明</a></dd>
+            <dd>
+                <a href="http://www.nd.fj.abc/">宁&nbsp;&nbsp;&nbsp;&nbsp;德</a></dd>
+            <dd>
+                <a href="http://www.np.fj.abc/">南&nbsp;&nbsp;&nbsp;&nbsp;平</a></dd>
+            <dd>
+                <a href="http://www.ly.fj.abc/">龙&nbsp;&nbsp;&nbsp;&nbsp;岩</a></dd>
+            <dd>
+                <a href="#" style="border: none; padding: 0.5em 20px 0.5em 21px;">全国漫游</a></dd>
+        </dl>
+    </div>
+    <div id="copyright">
+        中国农业银行 版权所有<br />
+        <span>COPYRIGHT &copy; 2009 AGRICULTURAL BANK OF CHINA. ALL RIGHTS RESERVED.</span></div>
+    </form>
+</body>
+</html>

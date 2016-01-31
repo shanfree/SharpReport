@@ -1,0 +1,86 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ListPage.master.cs" Inherits="SharpReportWeb.Base.ListPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <%--<link href="App_Themes/default/css/listPage.css" type="text/css" rel="stylesheet" /> --%>
+    <%--<link href="App_Themes/default/css/base.css" type="text/css" rel="stylesheet" /> --%>
+
+    <script src="../js/publicJs/jquery.js" type="text/javascript"></script>
+
+    <script src="../js/textinput_split.js" type="text/javascript"></script>
+
+    <script src="../js/table_split.js" type="text/javascript"></script>
+
+    <!--表单验证JS-->
+
+    <script src="../js/validationEngine-cn.js" type="text/javascript"></script>
+
+    <script src="../js/publicJs/validationEngine.js" type="text/javascript"></script>
+
+    <!--表单验证JS-->
+
+    <script src="../js/ListPage.js" type="text/javascript"></script>
+
+    <!--日期控件-->
+
+    <script src="../js/publicJs/DatePicker/WdatePicker.js" type="text/javascript"></script>
+
+    <script src="../js/publicJs/jquery.jPrintArea.js" type="text/javascript"></script>
+
+    <script src="../js/tooltip.js" type="text/javascript"></script>
+
+    <style type="text/css">
+        body
+        {
+            background-image: url("");
+            background-repeat: repeat-x;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="cphHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table>
+        <tr>
+            <td width="40%">
+                <asp:LinkButton ID="LB_CostCategoryInfo" runat="server" OnClick="LB_CostCategoryInfo_Click">费用类别</asp:LinkButton><br />
+                <asp:LinkButton ID="LB_OilTypeInfo" runat="server" OnClick="LB_OilTypeInfo_Click">油品</asp:LinkButton><br />
+                <asp:LinkButton ID="LB_ShipInfo" runat="server" OnClick="LB_ShipInfo_Click">船舶信息</asp:LinkButton><br />
+                <asp:LinkButton ID="LB_PartsInfo" runat="server" OnClick="LB_PartsInfo_Click">船舶部件类型</asp:LinkButton><br />
+                <asp:LinkButton ID="LB_RelShipParts" runat="server" OnClick="LB_RelShipParts_Click">船舶部件对应表</asp:LinkButton><br />
+                <asp:LinkButton ID="LB_PortInfo" runat="server" OnClick="LB_PortInfo_Click">港口信息</asp:LinkButton><br />
+                <asp:LinkButton ID="LB_PortTypeInfo" runat="server" OnClick="LB_PortTypeInfo_Click">港口类型</asp:LinkButton><br />
+                <asp:LinkButton ID="LB_RouteInfo" runat="server" OnClick="LB_RouteInfo_Click">航线信息</asp:LinkButton><br />
+                <asp:LinkButton ID="LB_VoyageInfo" runat="server" OnClick="LB_VoyageInfo_Click">航次信息</asp:LinkButton><br />
+                <asp:LinkButton ID="LB_RelRoutePort" runat="server" OnClick="LB_RelRoutePort_Click">航线港口对应表</asp:LinkButton><br />
+            </td>
+            <td width="60%">
+                <div id="divSearch">
+                    <asp:ContentPlaceHolder ID="cphSearch" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div id="divOperation">
+                    <asp:ContentPlaceHolder ID="cphOperation" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div id="divTable">
+                    <asp:ContentPlaceHolder ID="cphTable" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div id="divPages">
+                    <div style="clear: both; height: 0px;">
+                    </div>
+                </div>
+                <div id="divBottom">
+                    <asp:ContentPlaceHolder ID="cphBottom" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

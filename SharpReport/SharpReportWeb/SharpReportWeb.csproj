@@ -1,0 +1,899 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CA596E12-A48E-4B4A-B93C-23A96147E045}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SharpReportWeb</RootNamespace>
+    <AssemblyName>SharpReportWeb</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FusionCharts\Area2D.swf" />
+    <Content Include="FusionCharts\Bar2D.swf" />
+    <Content Include="FusionCharts\Bubble.swf" />
+    <Content Include="FusionCharts\Column2D.swf" />
+    <Content Include="FusionCharts\Column3D.swf" />
+    <Content Include="FusionCharts\Doughnut2D.swf" />
+    <Content Include="FusionCharts\Doughnut3D.swf" />
+    <Content Include="FusionCharts\FCExporter.swf" />
+    <Content Include="FusionCharts\Funnel.swf" />
+    <Content Include="FusionCharts\InverseMSArea.swf" />
+    <Content Include="FusionCharts\InverseMSColumn2D.swf" />
+    <Content Include="FusionCharts\InverseMSLine.swf" />
+    <Content Include="FusionCharts\Line.swf" />
+    <Content Include="FusionCharts\LogMSColumn2D.swf" />
+    <Content Include="FusionCharts\LogMSLine.swf" />
+    <Content Include="FusionCharts\MSArea.swf" />
+    <Content Include="FusionCharts\MSBar2D.swf" />
+    <Content Include="FusionCharts\MSBar3D.swf" />
+    <Content Include="FusionCharts\MSColumn2D.swf" />
+    <Content Include="FusionCharts\MSColumn3D.swf" />
+    <Content Include="FusionCharts\MSColumn3DLineDY.swf" />
+    <Content Include="FusionCharts\MSColumnLine3D.swf" />
+    <Content Include="FusionCharts\MSCombi2D.swf" />
+    <Content Include="FusionCharts\MSCombi3D.swf" />
+    <Content Include="FusionCharts\MSCombiDY2D.swf" />
+    <Content Include="FusionCharts\MSLine.swf" />
+    <Content Include="FusionCharts\MSSpline.swf" />
+    <Content Include="FusionCharts\MSSplineArea.swf" />
+    <Content Include="FusionCharts\MSStackedColumn2D.swf" />
+    <Content Include="FusionCharts\MSStackedColumn2DLineDY.swf" />
+    <Content Include="FusionCharts\Pie2D.swf" />
+    <Content Include="FusionCharts\Pie3D.swf" />
+    <Content Include="FusionCharts\Pyramid.swf" />
+    <Content Include="FusionCharts\Scatter.swf" />
+    <Content Include="FusionCharts\ScrollArea2D.swf" />
+    <Content Include="FusionCharts\ScrollColumn2D.swf" />
+    <Content Include="FusionCharts\ScrollCombi2D.swf" />
+    <Content Include="FusionCharts\ScrollCombiDY2D.swf" />
+    <Content Include="FusionCharts\ScrollLine2D.swf" />
+    <Content Include="FusionCharts\ScrollStackedColumn2D.swf" />
+    <Content Include="FusionCharts\Spline.swf" />
+    <Content Include="FusionCharts\SplineArea.swf" />
+    <Content Include="FusionCharts\SSGrid.swf" />
+    <Content Include="FusionCharts\StackedArea2D.swf" />
+    <Content Include="FusionCharts\StackedBar2D.swf" />
+    <Content Include="FusionCharts\StackedBar3D.swf" />
+    <Content Include="FusionCharts\StackedColumn2D.swf" />
+    <Content Include="FusionCharts\StackedColumn3D.swf" />
+    <Content Include="FusionCharts\StackedColumn3DLineDY.swf" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Log.aspx.cs">
+      <DependentUpon>Log.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Log.aspx.designer.cs">
+      <DependentUpon>Log.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MenuMange.aspx.cs">
+      <DependentUpon>MenuMange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MenuMange.aspx.designer.cs">
+      <DependentUpon>MenuMange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\RoleManage.aspx.cs">
+      <DependentUpon>RoleManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\RoleManage.aspx.designer.cs">
+      <DependentUpon>RoleManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Sample.aspx.cs">
+      <DependentUpon>Sample.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Sample.aspx.designer.cs">
+      <DependentUpon>Sample.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UserManage.aspx.cs">
+      <DependentUpon>UserManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UserManage.aspx.designer.cs">
+      <DependentUpon>UserManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Anjian\CommonFeeList.aspx.cs">
+      <DependentUpon>CommonFeeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Anjian\CommonFeeList.aspx.designer.cs">
+      <DependentUpon>CommonFeeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Anjian\CommonFeeStatistic.aspx.cs">
+      <DependentUpon>CommonFeeStatistic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Anjian\CommonFeeStatistic.aspx.designer.cs">
+      <DependentUpon>CommonFeeStatistic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Base\DynamicTHeaderHepler.cs" />
+    <Compile Include="Base\ListPage.cs">
+    </Compile>
+    <Compile Include="Base\ListPage.Master.cs">
+      <DependentUpon>ListPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Base\ListPage.Master.designer.cs">
+      <DependentUpon>ListPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Base\ModifyPage.Master.cs">
+      <DependentUpon>ModifyPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Base\ModifyPage.Master.designer.cs">
+      <DependentUpon>ModifyPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Base\PageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Caiwu\InvoiceSearch.aspx.cs">
+      <DependentUpon>InvoiceSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Caiwu\InvoiceSearch.aspx.designer.cs">
+      <DependentUpon>InvoiceSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChuanJ\BeijianInputPage.aspx.cs">
+      <DependentUpon>BeijianInputPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChuanJ\BeijianInputPage.aspx.designer.cs">
+      <DependentUpon>BeijianInputPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChuanJ\BeijianStatistic.aspx.cs">
+      <DependentUpon>BeijianStatistic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChuanJ\BeijianStatistic.aspx.designer.cs">
+      <DependentUpon>BeijianStatistic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChuanJ\BeijianSummary.aspx.cs">
+      <DependentUpon>BeijianSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChuanJ\BeijianSummary.aspx.designer.cs">
+      <DependentUpon>BeijianSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChuanJ\WuliaoList.aspx.cs">
+      <DependentUpon>WuliaoList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChuanJ\WuliaoList.aspx.designer.cs">
+      <DependentUpon>WuliaoList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChuanJ\XiuliList.aspx.cs">
+      <DependentUpon>XiuliList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChuanJ\XiuliList.aspx.designer.cs">
+      <DependentUpon>XiuliList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChuanJ\BeijianList.aspx.cs">
+      <DependentUpon>BeijianList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChuanJ\BeijianList.aspx.designer.cs">
+      <DependentUpon>BeijianList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChuanJ\JianyanList.aspx.cs">
+      <DependentUpon>JianyanList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChuanJ\JianyanList.aspx.designer.cs">
+      <DependentUpon>JianyanList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hangy\CertificateInput.aspx.cs">
+      <DependentUpon>CertificateInput.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hangy\CertificateInput.aspx.designer.cs">
+      <DependentUpon>CertificateInput.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hangy\CertificateList.aspx.cs">
+      <DependentUpon>CertificateList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hangy\CertificateList.aspx.designer.cs">
+      <DependentUpon>CertificateList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hangy\FCLManageList.aspx.cs">
+      <DependentUpon>FCLManageList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hangy\FCLManageList.aspx.designer.cs">
+      <DependentUpon>FCLManageList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hangy\Hangci.aspx.cs">
+      <DependentUpon>Hangci.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hangy\Hangci.aspx.designer.cs">
+      <DependentUpon>Hangci.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChuanJ\JianyanInputPage.aspx.cs">
+      <DependentUpon>JianyanInputPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChuanJ\JianyanInputPage.aspx.designer.cs">
+      <DependentUpon>JianyanInputPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChuanJ\JianyanStatistic.aspx.cs">
+      <DependentUpon>JianyanStatistic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChuanJ\JianyanStatistic.aspx.designer.cs">
+      <DependentUpon>JianyanStatistic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChuanJ\JianyanSummary.aspx.cs">
+      <DependentUpon>JianyanSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChuanJ\JianyanSummary.aspx.designer.cs">
+      <DependentUpon>JianyanSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChuanJ\MonthReport.aspx.cs">
+      <DependentUpon>MonthReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChuanJ\MonthReport.aspx.designer.cs">
+      <DependentUpon>MonthReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChuanJ\RanrunInput.aspx.cs">
+      <DependentUpon>RanrunInput.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChuanJ\RanrunInput.aspx.designer.cs">
+      <DependentUpon>RanrunInput.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChuanJ\RanrunList.aspx.cs">
+      <DependentUpon>RanrunList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChuanJ\RanrunList.aspx.designer.cs">
+      <DependentUpon>RanrunList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChuanJ\WuliaoInputPage.aspx.cs">
+      <DependentUpon>WuliaoInputPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChuanJ\WuliaoInputPage.aspx.designer.cs">
+      <DependentUpon>WuliaoInputPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChuanJ\WuliaoStatistic.aspx.cs">
+      <DependentUpon>WuliaoStatistic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChuanJ\WuliaoStatistic.aspx.designer.cs">
+      <DependentUpon>WuliaoStatistic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChuanJ\WuliaoSummary.aspx.cs">
+      <DependentUpon>WuliaoSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChuanJ\WuliaoSummary.aspx.designer.cs">
+      <DependentUpon>WuliaoSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChuanJ\XiuliinputPage.aspx.cs">
+      <DependentUpon>XiuliinputPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChuanJ\XiuliinputPage.aspx.designer.cs">
+      <DependentUpon>XiuliinputPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChuanJ\XiuliStatistic.aspx.cs">
+      <DependentUpon>XiuliStatistic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChuanJ\XiuliStatistic.aspx.designer.cs">
+      <DependentUpon>XiuliStatistic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChuanJ\XiuliSummary.aspx.cs">
+      <DependentUpon>XiuliSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChuanJ\XiuliSummary.aspx.designer.cs">
+      <DependentUpon>XiuliSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hangy\InsuranceOfCompensationInput.aspx.cs">
+      <DependentUpon>InsuranceOfCompensationInput.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hangy\InsuranceOfCompensationInput.aspx.designer.cs">
+      <DependentUpon>InsuranceOfCompensationInput.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hangy\InsuranceOfCompensationList.aspx.cs">
+      <DependentUpon>InsuranceOfCompensationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hangy\InsuranceOfCompensationList.aspx.designer.cs">
+      <DependentUpon>InsuranceOfCompensationList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hangy\InsuranceOfContainerInput.aspx.cs">
+      <DependentUpon>InsuranceOfContainerInput.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hangy\InsuranceOfContainerInput.aspx.designer.cs">
+      <DependentUpon>InsuranceOfContainerInput.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hangy\InsuranceOfContainerList.aspx.cs">
+      <DependentUpon>InsuranceOfContainerList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hangy\InsuranceOfContainerList.aspx.designer.cs">
+      <DependentUpon>InsuranceOfContainerList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hangy\InsuranceOfFreightTransport.aspx.cs">
+      <DependentUpon>InsuranceOfFreightTransport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hangy\InsuranceOfFreightTransport.aspx.designer.cs">
+      <DependentUpon>InsuranceOfFreightTransport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hangy\InsuranceOfFreightTransportInput.aspx.cs">
+      <DependentUpon>InsuranceOfFreightTransportInput.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hangy\InsuranceOfFreightTransportInput.aspx.designer.cs">
+      <DependentUpon>InsuranceOfFreightTransportInput.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hangy\LCLManageList.aspx.cs">
+      <DependentUpon>LCLManageList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hangy\LCLManageList.aspx.designer.cs">
+      <DependentUpon>LCLManageList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hangy\OilFee.aspx.cs">
+      <DependentUpon>OilFee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hangy\OilFee.aspx.designer.cs">
+      <DependentUpon>OilFee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hangy\RentContainerReportList.aspx.cs">
+      <DependentUpon>RentContainerReportList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hangy\RentContainerReportList.aspx.designer.cs">
+      <DependentUpon>RentContainerReportList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hangy\RentShipReportList.aspx.cs">
+      <DependentUpon>RentShipReportList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hangy\RentShipReportList.aspx.designer.cs">
+      <DependentUpon>RentShipReportList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hangy\ShipForm.aspx.cs">
+      <DependentUpon>ShipForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hangy\ShipForm.aspx.designer.cs">
+      <DependentUpon>ShipForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hangy\ShipIncomeMonthReport.aspx.cs">
+      <DependentUpon>ShipIncomeMonthReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hangy\ShipIncomeMonthReport.aspx.designer.cs">
+      <DependentUpon>ShipIncomeMonthReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hangy\VoyageInput.aspx.cs">
+      <DependentUpon>VoyageInput.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hangy\VoyageInput.aspx.designer.cs">
+      <DependentUpon>VoyageInput.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hangy\VoyageLoadInput.aspx.cs">
+      <DependentUpon>VoyageLoadInput.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hangy\VoyageLoadInput.aspx.designer.cs">
+      <DependentUpon>VoyageLoadInput.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hangy\VoyageLoadStatistic.aspx.cs">
+      <DependentUpon>VoyageLoadStatistic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hangy\VoyageLoadStatistic.aspx.designer.cs">
+      <DependentUpon>VoyageLoadStatistic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hangy\RentShipReportInput.aspx.cs">
+      <DependentUpon>RentShipReportInput.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hangy\RentShipReportInput.aspx.designer.cs">
+      <DependentUpon>RentShipReportInput.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hangy\RentContainerReportInput.aspx.cs">
+      <DependentUpon>RentContainerReportInput.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hangy\RentContainerReportInput.aspx.designer.cs">
+      <DependentUpon>RentContainerReportInput.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hangy\VoyageOtherList.aspx.cs">
+      <DependentUpon>VoyageOtherList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hangy\VoyageOtherList.aspx.designer.cs">
+      <DependentUpon>VoyageOtherList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HR\CommonFeeList.aspx.cs">
+      <DependentUpon>CommonFeeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HR\CommonFeeList.aspx.designer.cs">
+      <DependentUpon>CommonFeeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HR\CommonFeeStatistic.aspx.cs">
+      <DependentUpon>CommonFeeStatistic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HR\CommonFeeStatistic.aspx.designer.cs">
+      <DependentUpon>CommonFeeStatistic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainFrame\Banner.aspx.cs">
+      <DependentUpon>Banner.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainFrame\Banner.aspx.designer.cs">
+      <DependentUpon>Banner.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainFrame\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainFrame\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainFrame\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainFrame\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainFrame\Tabs.aspx.cs">
+      <DependentUpon>Tabs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainFrame\Tabs.aspx.designer.cs">
+      <DependentUpon>Tabs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\Default.Master.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\Default.Master.designer.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\MutiTab.Master.cs">
+      <DependentUpon>MutiTab.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\MutiTab.Master.designer.cs">
+      <DependentUpon>MutiTab.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ViewImage.aspx.cs">
+      <DependentUpon>ViewImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ViewImage.aspx.designer.cs">
+      <DependentUpon>ViewImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Hangy\Route.aspx.cs">
+      <DependentUpon>Route.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hangy\Route.aspx.designer.cs">
+      <DependentUpon>Route.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebService\SampleRateService.asmx.cs">
+      <DependentUpon>SampleRateService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WUC\CommonFeeStatistic.ascx.cs">
+      <DependentUpon>CommonFeeStatistic.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WUC\CommonFeeStatistic.ascx.designer.cs">
+      <DependentUpon>CommonFeeStatistic.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WUC\InvoiceList.ascx.cs">
+      <DependentUpon>InvoiceList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WUC\InvoiceList.ascx.designer.cs">
+      <DependentUpon>InvoiceList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WUC\ReportState.ascx.cs">
+      <DependentUpon>ReportState.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WUC\ReportState.ascx.designer.cs">
+      <DependentUpon>ReportState.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WUC\TestPage.aspx.cs">
+      <DependentUpon>TestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WUC\TestPage.aspx.designer.cs">
+      <DependentUpon>TestPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WUC\WUC_CommonFee.ascx.cs">
+      <DependentUpon>WUC_CommonFee.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WUC\WUC_CommonFee.ascx.designer.cs">
+      <DependentUpon>WUC_CommonFee.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WUC\WUC_MonthAndShipNavigate.ascx.cs">
+      <DependentUpon>WUC_MonthAndShipNavigate.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WUC\WUC_MonthAndShipNavigate.ascx.designer.cs">
+      <DependentUpon>WUC_MonthAndShipNavigate.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="___TestPage.aspx.cs">
+      <DependentUpon>___TestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="___TestPage.aspx.designer.cs">
+      <DependentUpon>___TestPage.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Framework\SharpMemberShip\SharpMemberShip.csproj">
+      <Project>{F2C16BC4-E8A9-4B56-B096-3A7CE3D1241D}</Project>
+      <Name>SharpMemberShip</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\SIRC.Framework\Utility.csproj">
+      <Project>{1F434F6D-64FF-4A51-8DF0-9D5C33C74743}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\WebControl\WebControlLib.csproj">
+      <Project>{24BA5A14-2F01-45EF-B9FB-6722D49A6AFA}</Project>
+      <Name>WebControlLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{698A17F4-38EA-4808-A3F8-8D5CD94F56A9}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DALFactory\DALFactory.csproj">
+      <Project>{2CE2425E-719F-4C3F-9FB0-D2F6247B1C51}</Project>
+      <Name>DALFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IDAL\IDAL.csproj">
+      <Project>{3DEB7114-E037-46C8-9814-C9C743B699A0}</Project>
+      <Name>IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{64D76A22-3D67-49DB-8BFE-AA87079200D4}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SQLServerDAL\SQLServerDAL.csproj">
+      <Project>{DAB6D664-DDFA-4E31-B992-E6C733BC9FED}</Project>
+      <Name>SQLServerDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Data\SharpMembership.sql" />
+    <None Include="App_Data\SharpReport.sql" />
+    <None Include="App_Data\AppSessionState.sql" />
+    <None Include="files\福建东方海运营收成本核算系统用户手册.doc" />
+    <None Include="Images\Thumbs.db" />
+    <Content Include="Hangy\FCLManageList.aspx" />
+    <Content Include="Hangy\LCLManageList.aspx" />
+    <Content Include="Hangy\RentContainerReportList.aspx" />
+    <Content Include="Hangy\RentShipReportInput.aspx" />
+    <Content Include="Hangy\RentContainerReportInput.aspx" />
+    <Content Include="Hangy\RentShipReportList.aspx" />
+    <Content Include="Hangy\ShipIncomeMonthReport.aspx" />
+    <Content Include="Hangy\VoyageInput.aspx" />
+    <Content Include="Hangy\VoyageOtherList.aspx" />
+    <Content Include="MasterPage\MutiTab.Master" />
+    <Content Include="Admin\Default.aspx" />
+    <Content Include="Admin\Log.aspx" />
+    <Content Include="Admin\Main.aspx" />
+    <Content Include="Admin\MenuMange.aspx" />
+    <Content Include="Admin\Register.aspx" />
+    <Content Include="Admin\RoleManage.aspx" />
+    <Content Include="Admin\Sample.aspx" />
+    <Content Include="Admin\UserManage.aspx" />
+    <Content Include="Anjian\CommonFeeList.aspx" />
+    <Content Include="Anjian\CommonFeeStatistic.aspx" />
+    <Content Include="Caiwu\InvoiceSearch.aspx" />
+    <Content Include="ChuanJ\BeijianInputPage.aspx" />
+    <Content Include="ChuanJ\BeijianStatistic.aspx" />
+    <Content Include="ChuanJ\BeijianSummary.aspx" />
+    <Content Include="ChuanJ\JianyanInputPage.aspx" />
+    <Content Include="ChuanJ\JianyanStatistic.aspx" />
+    <Content Include="ChuanJ\JianyanSummary.aspx" />
+    <Content Include="ChuanJ\RanrunList.aspx" />
+    <Content Include="ChuanJ\WuliaoInputPage.aspx" />
+    <Content Include="ChuanJ\WuliaoList.aspx" />
+    <Content Include="ChuanJ\WuliaoStatistic.aspx" />
+    <Content Include="ChuanJ\WuliaoSummary.aspx" />
+    <Content Include="ChuanJ\XiuliinputPage.aspx" />
+    <Content Include="ChuanJ\XiuliStatistic.aspx" />
+    <Content Include="ChuanJ\XiuliSummary.aspx" />
+    <Content Include="ChuanJ\XiuliList.aspx" />
+    <Content Include="ChuanJ\BeijianList.aspx" />
+    <Content Include="ChuanJ\JianyanList.aspx" />
+    <Content Include="CSS\bs.css" />
+    <Content Include="CSS\SpryAccordion.css" />
+    <Content Include="Hangy\CertificateInput.aspx" />
+    <Content Include="Hangy\CertificateList.aspx" />
+    <Content Include="Hangy\InsuranceOfCompensationInput.aspx" />
+    <Content Include="Hangy\InsuranceOfCompensationList.aspx" />
+    <Content Include="Hangy\InsuranceOfContainerInput.aspx" />
+    <Content Include="Hangy\InsuranceOfContainerList.aspx" />
+    <Content Include="Hangy\InsuranceOfFreightTransport.aspx" />
+    <Content Include="Hangy\InsuranceOfFreightTransportInput.aspx" />
+    <Content Include="Hangy\OilFee.aspx" />
+    <Content Include="Hangy\ShipForm.aspx" />
+    <Content Include="Hangy\VoyageLoadInput.aspx" />
+    <Content Include="Hangy\VoyageLoadStatistic.aspx" />
+    <Content Include="HR\CommonFeeList.aspx" />
+    <Content Include="HR\CommonFeeStatistic.aspx" />
+    <Content Include="Images\arrow_S1.png" />
+    <Content Include="Images\arrow_S2.png" />
+    <Content Include="Images\arrow_S3.png" />
+    <Content Include="Images\arrow_S4.png" />
+    <Content Include="Images\BGa_S1.png" />
+    <Content Include="Images\b_folder.png" />
+    <Content Include="Images\cancel.png" />
+    <Content Include="Images\disk.png" />
+    <Content Include="Images\down_S1.png" />
+    <Content Include="Images\folder_page.png" />
+    <Content Include="Images\hidden.png" />
+    <Content Include="Images\home.png" />
+    <Content Include="Images\inquiry.png" />
+    <Content Include="Images\loginPane.png" />
+    <Content Include="Images\map.png" />
+    <Content Include="Images\menuBL_S1.png" />
+    <Content Include="Images\people.png" />
+    <Content Include="Images\show.png" />
+    <Content Include="Images\statistics.png" />
+    <Content Include="Images\tabs.png" />
+    <Content Include="Images\title01.png" />
+    <Content Include="Images\title02.png" />
+    <Content Include="Images\title03.png" />
+    <Content Include="Images\title04.png" />
+    <Content Include="Images\title05.png" />
+    <Content Include="Images\title_06.png" />
+    <Content Include="Images\treei.png" />
+    <Content Include="Images\treeL.png" />
+    <Content Include="Images\treet.png" />
+    <Content Include="Images\up_S1.png" />
+    <Content Include="Images\view.gif" />
+    <Content Include="Images\whirl.gif" />
+    <Content Include="Images\write.png" />
+    <Content Include="Images\zoomIn.gif" />
+    <Content Include="Images\zoomOut.gif" />
+    <Content Include="Login.aspx" />
+    <Content Include="MainFrame\Banner.aspx" />
+    <Content Include="Base\ModifyPage.Master" />
+    <Content Include="Base\ListPage.Master" />
+    <Content Include="Hangy\Hangci.aspx" />
+    <Content Include="ChuanJ\MonthReport.aspx" />
+    <Content Include="ChuanJ\RanrunInput.aspx" />
+    <Content Include="CSS\Default.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="MainFrame\Copyright.html" />
+    <Content Include="MainFrame\Default.aspx" />
+    <Content Include="Images\arrows.png" />
+    <Content Include="Images\arrow_down.png" />
+    <Content Include="Images\arrow_left.png" />
+    <Content Include="Images\arrow_right.png" />
+    <Content Include="Images\arrow_up.png" />
+    <Content Include="Images\banner.png" />
+    <Content Include="Images\banner_.png" />
+    <Content Include="Images\BG.png" />
+    <Content Include="Images\BGx.png" />
+    <Content Include="Images\btn.png" />
+    <Content Include="Images\btn24.png" />
+    <Content Include="Images\chart_pie.png" />
+    <Content Include="Images\close.png" />
+    <Content Include="Images\delete.png" />
+    <Content Include="Images\dotted.png" />
+    <Content Include="Images\edit.png" />
+    <Content Include="Images\folder.png" />
+    <Content Include="Images\key.png" />
+    <Content Include="Images\loginPanel.png" />
+    <Content Include="Images\loginPanel_.png" />
+    <Content Include="Images\magnifier.png" />
+    <Content Include="Images\menuBL.png" />
+    <Content Include="Images\star.png" />
+    <Content Include="Images\sysTitle.png" />
+    <Content Include="Images\sysTitle_.png" />
+    <Content Include="Images\view.png" />
+    <Content Include="MainFrame\Main.aspx" />
+    <Content Include="MainFrame\Tabs.aspx" />
+    <Content Include="MasterPage\Admin.Master" />
+    <Content Include="MasterPage\Default.Master" />
+    <Content Include="My97DatePicker\calendar.js" />
+    <Content Include="My97DatePicker\lang\en.js" />
+    <Content Include="My97DatePicker\lang\zh-cn.js" />
+    <Content Include="My97DatePicker\lang\zh-tw.js" />
+    <Content Include="My97DatePicker\skin\datePicker.gif" />
+    <Content Include="My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="My97DatePicker\skin\default\img.gif" />
+    <Content Include="My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="My97DatePicker\WdatePicker.js" />
+    <Content Include="My97DatePicker\开发包\lang\en.js" />
+    <Content Include="My97DatePicker\开发包\lang\zh-cn.js" />
+    <Content Include="My97DatePicker\开发包\lang\zh-tw.js" />
+    <Content Include="My97DatePicker\开发包\readme.txt" />
+    <Content Include="My97DatePicker\开发包\skin\datePicker.gif" />
+    <Content Include="My97DatePicker\开发包\skin\default\datepicker.css" />
+    <Content Include="My97DatePicker\开发包\skin\default\img.gif" />
+    <Content Include="My97DatePicker\开发包\skin\WdatePicker.css" />
+    <Content Include="My97DatePicker\开发包\skin\whyGreen\bg.jpg" />
+    <Content Include="My97DatePicker\开发包\skin\whyGreen\datepicker.css" />
+    <Content Include="My97DatePicker\开发包\skin\whyGreen\img.gif" />
+    <Content Include="Pages\ViewImage.aspx" />
+    <Content Include="Hangy\Route.aspx" />
+    <Content Include="Script\bs.js" />
+    <Content Include="Script\Default.js" />
+    <Content Include="Script\jquery-1.7.1.js" />
+    <Content Include="Script\ScrollTabs.js" />
+    <Content Include="Script\SpryAccordion.js" />
+    <Content Include="UserImg\View1.jpg" />
+    <Content Include="UserImg\View2.jpg" />
+    <Content Include="WebService\SampleRateService.asmx" />
+    <Content Include="WUC\CommonFeeStatistic.ascx" />
+    <Content Include="WUC\InvoiceList.ascx" />
+    <Content Include="WUC\ReportState.ascx" />
+    <Content Include="WUC\TestPage.aspx" />
+    <Content Include="WUC\WUC_CommonFee.ascx" />
+    <Content Include="WUC\WUC_MonthAndShipNavigate.ascx" />
+    <Content Include="___TestPage.aspx" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>13271</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/SharpReportWeb</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
