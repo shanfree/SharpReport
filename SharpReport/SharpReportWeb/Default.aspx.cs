@@ -44,7 +44,7 @@ namespace SharpReportWeb
             {
                 if (!IsPostBack)
                 {
-                    Response.Redirect("MainFrame/Default.aspx");
+                    Response.Redirect("MainFrame/Default.aspx"); 
                     //// 在基类中根据凭据获取用户信息
                     //// 登录后的代码
                     //if (this.MenuID == DEFAULT_MENUID)
