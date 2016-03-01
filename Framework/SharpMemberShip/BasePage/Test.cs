@@ -5,7 +5,8 @@ using System.Text;
 
 namespace SIRC.Framework.SharpMemberShip.BasePage
 {
-    class Test
+    public class Test
     {
+
     }
 }
