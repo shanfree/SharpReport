@@ -60,6 +60,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BasePage\Test.cs" />
     <Compile Include="BasePage\WebBasePage.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
