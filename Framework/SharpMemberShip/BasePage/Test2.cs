@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SIRC.Framework.SharpMemberShip
 {
-    public class Test
+    public class Test2
     {
         public string ID { get; set; }
         public string Name { get; set; }
