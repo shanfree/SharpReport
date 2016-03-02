@@ -7,6 +7,7 @@ namespace SIRC.Framework.SharpMemberShip.BasePage
 {
     public class Test
     {
+        public string ID { get; set; }
         public string Message { get; set; }
     }
 }
